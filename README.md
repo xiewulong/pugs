@@ -9,6 +9,7 @@
 * [安装](#install)
 * [使用](#useage)
 * [图标](#icon)
+* [表单控件组](#form-group)
 * [License](#license)
 
 </details>
@@ -83,6 +84,23 @@ include ~@cainfoharbor/linkfin-console-ui-components/mixins/menu
   <strong>带html的</strong>   <!--参数html的值-->
   icon  <!--参数text的值-->
 </i>
+```
+
+## Form-group
+
+表单控件组
+
+```js
+// 参数说明
+{
+  // locals.formGroup, 必须, 否则输出为空
+  formGroup: {
+  },
+}
+```
+
+```html
+<!--输出html结构-->
 ```
 
 ## License
