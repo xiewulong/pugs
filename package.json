@@ -1,0 +1,27 @@
+{
+  "name": "pugs",
+  "version": "0.0.1",
+  "description": "Common pug component templates",
+  "main": "index.pug",
+  "scripts": {
+    "test": "npm run test:icon",
+    "test:icon": "node ./samples/icon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiewulong/pugs.git"
+  },
+  "keywords": [
+    "pug",
+    "template"
+  ],
+  "author": "xiewulong <xiewulong@vip.qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiewulong/pugs/issues"
+  },
+  "homepage": "https://github.com/xiewulong/pugs#readme",
+  "dependencies": {
+    "pug": "^2.0.0-rc.2"
+  }
+}
