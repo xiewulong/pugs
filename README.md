@@ -9,7 +9,7 @@
 * [安装](#install)
 * [使用](#useage)
 * [图标](#icon)
-* [表单控件组](#form-group)
+* [表单控件组](#formGroup)
 * [License](#license)
 
 </details>
@@ -86,7 +86,7 @@ include ~@cainfoharbor/linkfin-console-ui-components/mixins/menu
 </i>
 ```
 
-## Form-group
+## FormGroup
 
 表单控件组
 
