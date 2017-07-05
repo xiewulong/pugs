@@ -9,7 +9,7 @@
 * [安装](#install)
 * [使用](#useage)
 * [图标](#icon)
-* [表单控件组](#formGroup)
+* [表单控件组](#formgroup)
 * [License](#license)
 
 </details>
