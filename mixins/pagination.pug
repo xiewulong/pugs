@@ -29,7 +29,7 @@ mixin pagination(params)
         if params.first !== undefined
           +render_page_button(params.first, minPage, params.first_cls, params.page <= minPage)
         if params.prev !== undefined
-          +render_page_button(params.prev, Math.max(params.page - 1, minPage), params.prevCls, params.page <= minPage)
+          +render_page_button(params.prev, Math.max(params.page - 1, minPage), params.prev_cls, params.page <= minPage)
         - var beginPage = Math.max(minPage, Math.ceil(params.page - params.max_button_count / 2))
         - var endPage = beginPage + params.max_button_count - 1
         if endPage >= maxPage
@@ -44,6 +44,6 @@ mixin pagination(params)
           +render_page_button(params.ellipsis, 0)
           +render_page_button(maxPage, maxPage, params.page_cls)
         if params.next !== undefined
-          +render_page_button(params.next, Math.min(+ params.page + 1, maxPage), params.nextCls, params.page >= maxPage)
+          +render_page_button(params.next, Math.min(+ params.page + 1, maxPage), params.next_cls, params.page >= maxPage)
         if params.last !== undefined
           +render_page_button(params.last, maxPage, params.last_cls, params.page >= maxPage)
