@@ -64,7 +64,7 @@ console.log(html);  // -> <div class="menu">...</div>
 
 使用方式三: web端pug(jade) 或 node服务端pug(jade) 模板
 
-```jade
+```pug
 //- 需要在locals中预设locals.menu对象数据
 include ~pugs/menu
 ```
