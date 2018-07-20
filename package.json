@@ -1,6 +1,6 @@
 {
   "name": "pugs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Common pug component templates",
   "main": "index.pug",
   "scripts": {
