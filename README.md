@@ -17,7 +17,7 @@
 * [下拉列表/菜单](#dropdown)
 * [文件上传按钮](#file)
 * [表单](#form)
-* [表单控件组](#formgroup)
+* [表单控件组](#form-group)
 * [图标](#icon)
 * [输入控件](#input)
 * [菜单](#menu)
