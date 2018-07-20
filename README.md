@@ -17,7 +17,7 @@
 * [下拉列表/菜单](#dropdown)
 * [文件上传按钮](#file)
 * [表单](#form)
-* [表单控件组](#form_group)
+* [表单控件组](#formgroup)
 * [图标](#icon)
 * [输入控件](#input)
 * [菜单](#menu)
@@ -458,7 +458,7 @@ include ~pugs/mixins/menu
     title: 'title',             // legend标题, 可选, 默认不渲染legend标签
     html: '...',                // 内容html, 可选, 默认为空
 
-    // 控件组, 可选, 默认空, 同formGroup, 渲染优先级高于html参数
+    // 控件组, 可选, 默认空, 同form_group, 渲染优先级高于html参数
     groups: [
       {
         label: 'Username',
@@ -519,7 +519,7 @@ include ~pugs/mixins/menu
 </form>
 ```
 
-## FormGroup
+## Form Group
 
 表单控件组
 
@@ -1034,13 +1034,13 @@ include ~pugs/mixins/menu
   pagination: {
     totalCount: 666,                                            // 总数据条数, 必须
     cls: ['pagination', 'pagination-more'],                     // 最外层class类, 可选, 默认pagination, 覆盖形式
-    firstCls: ['first'],                                        // 第一页按钮样式类, 可选, 默认空
-    lastCls: ['last'],                                          // 最后一页按钮样式类, 可选, 默认空
-    prevCls: ['prev'],                                          // 前一页按钮样式类, 可选, 默认空
-    nextCls: ['next'],                                          // 下一页按钮样式类, 可选, 默认空
-    pageCls: ['page'],                                          // 分页按钮样式类, 可选, 默认空
-    // activeCls: ['active'],                                   // 激活样式类, 可选, 默认active
-    // disabledCls: ['disabled'],                               // 禁用样式类, 可选, 默认disabled
+    first_cls: ['first'],                                        // 第一页按钮样式类, 可选, 默认空
+    last_cls: ['last'],                                          // 最后一页按钮样式类, 可选, 默认空
+    prev_cls: ['prev'],                                          // 前一页按钮样式类, 可选, 默认空
+    next_cls: ['next'],                                          // 下一页按钮样式类, 可选, 默认空
+    page_cls: ['page'],                                          // 分页按钮样式类, 可选, 默认空
+    // active_cls: ['active'],                                   // 激活样式类, 可选, 默认active
+    // disabled_cls: ['disabled'],                               // 禁用样式类, 可选, 默认disabled
     first: 'first',                                             // 第一页按钮的文本, 可选, 默认为空, false不显示第一页按钮
     last: 'last',                                               // 最后一页按钮的文本, 可选, 默认为空, false不显示最后一页按钮
     prev: '«',                                                  // 前一页按钮的文本, 可选, 默认为空, false不显示前一页按钮
@@ -1048,9 +1048,9 @@ include ~pugs/mixins/menu
     url: '/route/path?query=string&page=${page}&size=${size}',  // 跳转url, 可选, 默认javascript:;, 会自动替换${page}和${size}
     page: 10,                                                   // 当前页码, 可选, 默认1
     // size: 20,                                                // 每页数量, 可选, 默认20
-    // maxButtonCount: 6,                                       // 最多显示页数, 可选, 默认6
-    // hideOnSinglePage: false,                                 // 只有一页时隐藏, 可选, 默认false不隐藏
-    // disableActivePageButton: false,                          // 禁用当前页, 可选, 默认false不禁用
+    // max_button_count: 6,                                       // 最多显示页数, 可选, 默认6
+    // hide_on_single_page: false,                                 // 只有一页时隐藏, 可选, 默认false不隐藏
+    // disable_active_page_button: false,                          // 禁用当前页, 可选, 默认false不禁用
     ellipsis: '...',                                            // 是否省略显示第一页和最后一页的按钮, 可选, 默认不显示
   },
 }
@@ -1074,62 +1074,6 @@ include ~pugs/mixins/menu
   <li class="next"><a href="/route/path?query=string&amp;page=11&amp;size=20">»</a></li>
   <li class="last"><a href="/route/path?query=string&amp;page=34&amp;size=20">last</a></li>
 </ul>
-```
-
-## Popover
-
-弹出框
-
-```js
-// 参数说明
-{
-  // locals.popover, 必须, 否则输出为空
-  popover: {
-  },
-}
-```
-
-```html
-<!-- 输出html结构 -->
-```
-
-## Result
-
-结果页
-
-```js
-// 参数说明
-{
-  // locals.error, 必须, 否则输出为空
-  result: {
-    icon: {name: 'error'},    // 图标, 可选, 默认为空
-    text: 'Page not found.',  // 文本, 可选, 默认为空
-
-    // 链接, 可选, 默认为空, 同button
-    links: [
-      {
-        style: 'default',
-        href: '/',
-        size: 'sm',
-        text: 'Back to homepage',
-      },
-    ],
-
-  },
-}
-```
-
-```html
-<!-- 输出html结构 -->
-<div class="result">
-  <div class="result-icon">
-    <i class="icon icon-error" aria-hidden="true"></i>
-  </div>
-  <div class="result-text">Page not found.</div>
-  <div class="result-links">
-    <a class="btn btn-default btn-sm" href="/">Back to homepage</a>
-  </div>
-</div>
 ```
 
 ## Select
