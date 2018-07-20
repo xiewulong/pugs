@@ -1,0 +1,36 @@
+include icon
+
+mixin tree(params)
+  - params = params || {}
+  - params.activeCls = params.activeCls || 'active'
+
+  mixin render_items(items, depth = 0)
+    if items && items.length
+      ul
+        each item, i in items
+          - var hasChildren = item.children && item.children.length
+          - var active = params.active_id && item.id == params.active_id
+          li(
+            class=[active && params.activeCls || null]
+            data-id=item.id
+            data-depth=params.depth && depth
+          )
+            if typeof params.item === 'function'
+              != params.item(item, active, depth, i)
+            else
+              .item
+                if hasChildren && params.arrow
+                  i(class=params.arrow)
+                if item.icon
+                  +icon(item.icon)
+                if item.url
+                  a(
+                    href=item.url
+                    target=item.target
+                  )= item.name
+                else
+                  span= item.name
+            if hasChildren
+              +render_items(item.children, depth + 1)
+
+  +render_items(params.items)
