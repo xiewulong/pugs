@@ -526,7 +526,7 @@ include ~pugs/mixins/menu
 ```js
 // 参数说明
 {
-  // locals.formGroup, 必须, 否则输出为空
+  // locals.form_group, 必须, 否则输出为空
   form_group: {
     // prefix: 'form',          // 类前缀, 可选, 默认form
     cls: ['form-group-more'],   // 额外class类, 可选, 默认为空
@@ -559,7 +559,7 @@ include ~pugs/mixins/menu
 ```js
 // 参数说明
 {
-  // locals.formGroup, 必须, 否则输出为空
+  // locals.form_group, 必须, 否则输出为空
   form_group: {
     // prefix: 'form',            // 类前缀, 可选, 默认form
     cls: ['form-group-more'],     // 额外class类, 可选, 默认为空
@@ -595,7 +595,7 @@ include ~pugs/mixins/menu
 ```js
 // 参数说明
 {
-  // locals.formGroup, 必须, 否则输出为空
+  // locals.form_group, 必须, 否则输出为空
   form_group: {
     // prefix: 'form',          // 类前缀, 可选, 默认form
     cls: ['form-group-more'],   // 额外class类, 可选, 默认为空
@@ -642,7 +642,7 @@ include ~pugs/mixins/menu
 ```js
 // 参数说明
 {
-  // locals.formGroup, 必须, 否则输出为空
+  // locals.form_group, 必须, 否则输出为空
   form_group: {
     // prefix: 'form',        // 类前缀, 可选, 默认form
     cls: ['form-group-more'], // 额外class类, 可选, 默认为空
