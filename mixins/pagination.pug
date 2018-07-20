@@ -1,0 +1,49 @@
+mixin pagination(params)
+  - params = params || {}
+  - params.cls = params.cls || 'pagination'
+  - params.activeCls = params.activeCls || 'active'
+  - params.disabledCls = params.disabledCls || 'disabled'
+  - params.page = params.page || 1
+  - params.size = params.size || (pagination && pagination.size) || 20
+  - params.maxButtonCount = params.maxButtonCount || (pagination && pagination.maxButtonCount) || 6
+  - params.hideOnSinglePage = params.hideOnSinglePage === undefined && (checkbox && checkbox.hideOnSinglePage) || params.hideOnSinglePage
+  - params.disableActivePageButton = params.disableActivePageButton === undefined && (checkbox && checkbox.disableActivePageButton) || params.disableActivePageButton
+  - params.url = params.url || 'javascript:;'
+
+  mixin renderPageButton(label, page, cls, disabled, active)
+    li(class=[cls, active && params.activeCls, disabled && params.disabledCls])
+      if page
+        if active || disabled
+          span= label
+        else
+          a(href=params.url.replace('${page}', page).replace('${size}', params.size))= label
+      else
+        em= label
+
+  if params.totalCount
+    - var pageCount = Math.ceil(params.totalCount / params.size)
+    if !params.hideOnSinglePage || pageCount > 1
+      - var minPage = 1
+      - var maxPage = pageCount
+      ul(class=params.cls)&attributes(params.attributes, attributes)
+        if params.first !== undefined
+          +renderPageButton(params.first, minPage, params.firstCls, params.page <= minPage)
+        if params.prev !== undefined
+          +renderPageButton(params.prev, Math.max(params.page - 1, minPage), params.prevCls, params.page <= minPage)
+        - var beginPage = Math.max(minPage, Math.ceil(params.page - params.maxButtonCount / 2))
+        - var endPage = beginPage + params.maxButtonCount - 1
+        if endPage >= maxPage
+          - endPage = maxPage
+          - beginPage = Math.max(minPage, endPage - params.maxButtonCount + 1)
+        if params.ellipsis && beginPage > 2
+          +renderPageButton(minPage, minPage, params.pageCls)
+          +renderPageButton(params.ellipsis, 0)
+        - for(var currentPage = beginPage; currentPage <= endPage; currentPage++)
+          +renderPageButton(currentPage, currentPage, params.pageCls, params.disableActivePageButton && currentPage == params.page, currentPage == params.page)
+        if params.ellipsis && endPage < maxPage - 1
+          +renderPageButton(params.ellipsis, 0)
+          +renderPageButton(maxPage, maxPage, params.pageCls)
+        if params.next !== undefined
+          +renderPageButton(params.next, Math.min(+ params.page + 1, maxPage), params.nextCls, params.page >= maxPage)
+        if params.last !== undefined
+          +renderPageButton(params.last, maxPage, params.lastCls, params.page >= maxPage)
