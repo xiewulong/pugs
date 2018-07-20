@@ -34,5 +34,13 @@ it('Breadcrumb', async () => {
         },
       ],
     },
-  }), '');
+  }), `
+<ol class="breadcrumb breadcrumb-more">
+  <li class="first home"><a href="/">Home</a>
+  </li>
+  <li>Library
+  </li>
+  <li class="active active-more">Data
+  </li>
+</ol>`);
 });

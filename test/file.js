@@ -33,5 +33,10 @@ it('File', async () => {
         },
       },
     },
-  }), '');
+  }), `
+<button class="btn btn-primary btn-more btn-file" type="button">
+  <i class="fa fa-upload" aria-hidden="true">
+  </i><span><strong>带html的</strong>file</span>
+  <input type="file" name="file" multiple="multiple"/>
+</button>`);
 });

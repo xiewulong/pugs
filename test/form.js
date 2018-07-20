@@ -55,5 +55,26 @@ it('Form', async () => {
         },
       ],
     },
-  }), '');
+  }), `
+<form class="form-horizontal form-more" name="form-name" action="/path/to/action" method="post" enctype="multipart/form-data">
+  <fieldset disabled="disabled">
+    <legend>title</legend>
+    <div class="form-group">
+      <label class="control-label" for="username">Username
+      </label>
+      <input class="form-control" type="text" id="username" name="Username" placeholder="Username"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="password">Password
+      </label>
+      <input class="form-control" type="password" id="password" name="Password" placeholder="Password"/>
+    </div>...
+    <div class="form-submit">
+      <button class="btn btn-default" type="button">Cancel
+      </button>
+      <button class="btn btn-primary" type="submit">Submit
+      </button>
+    </div>
+  </fieldset>
+</form>`);
 });

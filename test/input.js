@@ -29,7 +29,8 @@ it('Input', async () => {
       // left: false,
       // right: false,
     },
-  }), '');
+  }), `
+<input class="form-control input-more input-lg" type="text" id="input" name="name" value="value" placeholder="placeholder" readonly="readonly" disabled="disabled" required="required" autofocus="autofocus" autocomplete="off"/>`);
 });
 
 it('Input', async () => {
@@ -52,7 +53,16 @@ it('Input', async () => {
       left: '@',
       right: {name: 'calendar'},
     },
-  }), '');
+  }), `
+<div class="input-group">
+  <div class="input-group-addon">@
+  </div>
+  <input type="text" name="name" value="value" placeholder="placeholder"/>
+  <div class="input-group-addon">
+    <i class="icon icon-calendar" aria-hidden="true">
+    </i>
+  </div>
+</div>`);
 });
 
 it('Input', async () => {
@@ -120,5 +130,35 @@ it('Input', async () => {
         },
       ],
     },
-  }), '');
+  }), `
+<div class="input-group">
+  <div class="input-group-btn">
+    <button class="btn btn-default" type="button">left
+    </button>
+  </div>
+  <input type="text" name="name" value="value" placeholder="placeholder"/>
+  <div class="input-group-btn">
+    <button class="btn btn-primary" type="button">right
+    </button>
+    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"><span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right">
+      <li class="dropdown-header">Dropdown header</li>
+      <li class="selected"><a href="javascript:;">
+          <i class="icon icon-action" aria-hidden="true">
+          </i>Action</a>
+      </li>
+      <li class="selected"><a href="javascript:;">Another action</a>
+      </li>
+      <li class="selected"><a href="javascript:;" target="_blank">Something else here</a>
+      </li>
+      <li class="dropdown-divider" role="separator"></li>
+      <li class="dropdown-header">Dropdown header</li>
+      <li class="selected"><a href="javascript:;">Separated link</a>
+      </li>
+      <li class="disabled selected"><a href="javascript:;">Disabled link</a>
+      </li>
+    </ul>
+  </div>
+</div>`);
 });

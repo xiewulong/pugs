@@ -55,5 +55,26 @@ it('Dropdown', async () => {
         },
       ],
     },
-  }), '');
+  }), `
+<div class="dropup dropdown dropdown-more">
+  <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>带html的</strong>dropdown<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right">
+    <li class="dropdown-header">Dropdown header</li>
+    <li class="selected"><a href="javascript:;">
+        <i class="icon icon-action" aria-hidden="true">
+        </i>Action</a>
+    </li>
+    <li class="selected"><a href="javascript:;">Another action</a>
+    </li>
+    <li class="selected"><a href="javascript:;" target="_blank">Something else here</a>
+    </li>
+    <li class="dropdown-divider" role="separator"></li>
+    <li class="dropdown-header">Dropdown header</li>
+    <li class="selected"><a href="javascript:;">Separated link</a>
+    </li>
+    <li class="disabled selected"><a href="javascript:;">Disabled link</a>
+    </li>
+  </ul>
+</div>`);
 });

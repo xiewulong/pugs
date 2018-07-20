@@ -9,4 +9,4 @@
 const path = require('path');
 const pug = require('pug');
 
-module.exports.default = module.exports = pug.compileFile(path.join(__dirname, 'tree.pug'));
+module.exports.default = module.exports = pug.compileFile(path.join(__dirname, 'tree.pug'), {pretty: true});

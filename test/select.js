@@ -28,7 +28,15 @@ it('Select', async () => {
         {name: 'f', value: 5},
       ],
     },
-  }), '');
+  }), `
+<select class="form-control select-more input-lg" id="select-id" name="select-name" multiple="multiple">
+  <option value="0">a</option>
+  <option value="1" selected="selected">b</option>
+  <option value="2">c</option>
+  <option value="3">d</option>
+  <option value="4">e</option>
+  <option value="5">f</option>
+</select>`);
 });
 
 it('Select', async () => {
@@ -52,5 +60,24 @@ it('Select', async () => {
         {name: '5值名称', value: 5},
       ],
     },
-  }), '');
+  }), `
+<div class="dropup select select-more multiple">
+  <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" id="select-id">
+    <input type="hidden" name="select-name" value="2"/><strong></strong><span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right">
+    <li data-value="0">0值名称
+    </li>
+    <li data-value="1">1值名称
+    </li>
+    <li class="selected" data-value="2">2值名称
+    </li>
+    <li data-value="3">3值名称
+    </li>
+    <li class="disabled" data-value="4">4值名称
+    </li>
+    <li data-value="5">5值名称
+    </li>
+  </ul>
+</div>`);
 });

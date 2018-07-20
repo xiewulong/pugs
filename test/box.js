@@ -18,5 +18,10 @@ it('Box', async () => {
       html: '<strong>带html的</strong>',
       text: 'box',
     },
-  }), '');
+  }), `
+<div class="box box-more">
+  <div class="box-hd">
+    <h3>title</h3>
+  </div><strong>带html的</strong>box
+</div>`);
 });

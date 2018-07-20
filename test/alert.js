@@ -20,5 +20,11 @@ it('Alert', async () => {
       html: '<strong>带html的</strong>',
       text: 'alert',
     },
-  }), '');
+  }), `
+<div class="alert alert-dismissible fade" role="alert">
+  <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+  </button>
+  <i class="icon icon-success" aria-hidden="true">
+  </i><strong>带html的</strong>alert
+</div>`);
 });

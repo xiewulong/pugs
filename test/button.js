@@ -29,5 +29,7 @@ it('Button', async () => {
       // 	name: 'spinner',
       // },
     },
-  }), '');
+  }), `
+<button class="btn btn-primary btn-more" type="button" name="button-name"><strong>带html的</strong>button
+</button>`);
 });

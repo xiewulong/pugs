@@ -19,5 +19,7 @@ it('Icon', async () => {
       html: '<strong>带html的</strong>',
       text: 'icon',
     },
-  }), '');
+  }), `
+<i class="fa fa-spinner icon-more" aria-hidden="true"><strong>带html的</strong>icon
+</i>`);
 });

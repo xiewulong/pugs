@@ -28,7 +28,7 @@ mixin form(params)
       if params.groups.length
         each group in params.groups
           - group.prefix = params.prefix
-          +formGroup(group)
+          +form_group(group)
       != params.html
       block
       if params.buttons.length

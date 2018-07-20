@@ -24,7 +24,8 @@ it('Checkbox', async () => {
       // readonly: false,
       // disabled: false,
     },
-  }), '');
+  }), `
+<input class="checkbox-more" type="checkbox" name="checkbox-name" value="checkbox-value"/>`);
 });
 
 it('Checkbox', async () => {
@@ -44,5 +45,8 @@ it('Checkbox', async () => {
       html: '<strong>带html的</strong>',
       text: 'radio',
     },
-  }), '');
+  }), `
+<label class="radio radio-more radio-fake readonly disabled" for="radio-id">
+  <input type="radio" id="radio-id" name="radio-name" value="radio-value" checked="checked" readonly="readonly" disabled="disabled"/><strong>带html的</strong>radio
+</label>`);
 });

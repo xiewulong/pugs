@@ -44,5 +44,126 @@ it('Table', async () => {
       },
       html: '<tr><td colspan="4">foot</td></tr>',
     },
-  }), '');
+  }), `
+<div class="table-cls table-more table-responsive">
+  <table class="table table-bordered table-condensed table-hover table-striped">
+    <caption>title</caption>
+    <thead>
+      <tr>
+        <th class="index" width="10%">#
+        </th>
+        <th class="firstname" width="30%">Firstname
+        </th>
+        <th class="lastname" width="30%">Lastname
+        </th>
+        <th class="username" width="30%">Username
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="active">1
+        </td>
+        <td>Mark
+        </td>
+        <td class="info">Otto
+        </td>
+        <td>@mdo
+        </td>
+      </tr>
+      <tr class="active">
+        <td>2
+        </td>
+        <td>Jacob
+        </td>
+        <td>Thornton
+        </td>
+        <td>@fat
+        </td>
+      </tr>
+      <tr>
+        <td>3
+        </td>
+        <td class="success">Larry
+        </td>
+        <td>the Bird
+        </td>
+        <td class="danger">@twitter
+        </td>
+      </tr>
+      <tr class="success">
+        <td>4
+        </td>
+        <td>Firstname
+        </td>
+        <td>Lastname
+        </td>
+        <td>Username
+        </td>
+      </tr>
+      <tr>
+        <td>5
+        </td>
+        <td>Firstname
+        </td>
+        <td>Lastname
+        </td>
+        <td>Username
+        </td>
+      </tr>
+      <tr class="info">
+        <td>6
+        </td>
+        <td>Firstname
+        </td>
+        <td>Lastname
+        </td>
+        <td>Username
+        </td>
+      </tr>
+      <tr>
+        <td>7
+        </td>
+        <td>Firstname
+        </td>
+        <td>Lastname
+        </td>
+        <td>Username
+        </td>
+      </tr>
+      <tr class="warning">
+        <td>8
+        </td>
+        <td>Firstname
+        </td>
+        <td>Lastname
+        </td>
+        <td>Username
+        </td>
+      </tr>
+      <tr>
+        <td>9
+        </td>
+        <td>Firstname
+        </td>
+        <td>Lastname
+        </td>
+        <td>Username
+        </td>
+      </tr>
+      <tr class="danger">
+        <td>10
+        </td>
+        <td>Firstname
+        </td>
+        <td>Lastname
+        </td>
+        <td>Username
+        </td>
+      </tr>
+    </tbody>
+    <tfoot><tr><td colspan="4">foot</td></tr>
+    </tfoot>
+  </table>
+</div>`);
 });

@@ -79,5 +79,59 @@ it('Tree', async () => {
         },
       ],
     },
-  }), '');
+  }), `
+<ul>
+  <li data-id="1" data-depth="0">
+    <div class="item">
+      <i class="icon icon-home" aria-hidden="true">
+      </i><a href="/menu1">menu1</a>
+    </div>
+  </li>
+  <li data-id="2" data-depth="0">
+    <div class="item"><i class="icon-arrow-down"></i>
+      <i class="icon icon-home" aria-hidden="true">
+      </i><span>menu2</span>
+    </div>
+    <ul>
+      <li data-id="6" data-depth="1">
+        <div class="item"><a href="/menu6">menu6</a>
+        </div>
+      </li>
+    </ul>
+  </li>
+  <li data-id="3" data-depth="0">
+    <div class="item">
+      <i class="icon icon-home" aria-hidden="true">
+      </i><a href="/menu3">menu3</a>
+    </div>
+  </li>
+  <li data-id="4" data-depth="0">
+    <div class="item"><i class="icon-arrow-down"></i>
+      <i class="icon icon-home" aria-hidden="true">
+      </i><span>menu4</span>
+    </div>
+    <ul>
+      <li data-id="7" data-depth="1">
+        <div class="item"><a href="/menu7">menu7</a>
+        </div>
+      </li>
+      <li data-id="8" data-depth="1">
+        <div class="item"><i class="icon-arrow-down"></i><span>menu8</span>
+        </div>
+        <ul>
+          <li data-id="9" data-depth="2">
+            <div class="item"><a href="/menu9">menu9</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-id="5" data-depth="0">
+    <div class="item">
+      <i class="icon icon-home" aria-hidden="true">
+      </i><a href="/menu5">menu5</a>
+    </div>
+  </li>
+</ul>`);
 });
