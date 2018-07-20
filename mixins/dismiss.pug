@@ -3,14 +3,14 @@ include button
 mixin dismiss(params)
   - params = params || {}
   - params.cls = params.cls || 'close'
-  - params.ariaLabel = params.ariaLabel || 'Close'
+  - params.aria_label = params.aria_label || 'Close'
 
   if params.name
     button(
       type="button"
       class=params.cls
       data-dismiss=params.name
-      aria-label=params.ariaLabel
+      aria-label=params.aria_label
     )&attributes(params.attributes, attributes)
       if params.html || block || params.text
         != params.html

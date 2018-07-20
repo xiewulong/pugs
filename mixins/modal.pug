@@ -7,7 +7,7 @@ mixin modal(params)
 	- params.prefix = params.prefix || (modal && modal.prefix) || 'modal'
 	- params.content = params.content || {}
 
-	mixin renderContent()
+	mixin render_content()
 		if params.content.action || params.content.method
 			+form({cls: [`${params.prefix}-content`]})&attributes(params.content)
 				block
@@ -17,7 +17,7 @@ mixin modal(params)
 
 	div(class=[params.prefix, {fade: params.fade !== false}, params.cls])&attributes(params.attributes, attributes)
 		div(class=[`${params.prefix}-dialog`, {[`${params.prefix}-${params.size}`]: params.size}])
-			+renderContent
+			+render_content
 				if params.title
 					div(class=[`${params.prefix}-header`])
 						if params.dismiss !== false

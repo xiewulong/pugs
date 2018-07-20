@@ -5,20 +5,20 @@ mixin dropdown(params)
   - params.prefix = params.prefix || (dropdown && dropdown.prefix) || 'dropdown'
   - var empty = !params.items || !params.items.length
 
-  mixin renderWrapper()
+  mixin render_wrapper()
     if params.wrap !== false && params.wrap !== 0
       div(class=[{dropup: params.up, [params.prefix]: params.static}, params.cls])&attributes(params.attributes, attributes)
         block
     else
       block
 
-  mixin renderItem(item)
+  mixin render_item(item)
     if item.icon
       +icon(item.icon)
     != item.html
     = item.name
 
-  +renderWrapper
+  +render_wrapper
     +button({
       style: params.style,
       size: params.size,
@@ -58,6 +58,6 @@ mixin dropdown(params)
                 href=item.url
                 target=item.target
               )
-                +renderItem(item)
+                +render_item(item)
             else
-              +renderItem(item)
+              +render_item(item)

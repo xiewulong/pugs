@@ -13,7 +13,7 @@ it('Breadcrumb', async () => {
   assert.equal(component({
     breadcrumb: {
       cls: ['breadcrumb', 'breadcrumb-more'],
-      activeCls: ['active', 'active-more'],
+      active_cls: ['active', 'active-more'],
       // item: '<a href="${url}" class="${active}">${name}</a>',
       // item: (item, i) => {
       // 	console.dir(item);

@@ -32,7 +32,7 @@ it('Form group', async () => {
 
 it('Form group', async () => {
   assert.equal(component({
-    formGroup: {
+    form_group: {
       // prefix: 'form',
       cls: ['form-group-more'],
       size: 'lg',
@@ -53,7 +53,7 @@ it('Form group', async () => {
 
 it('Form group', async () => {
   assert.equal(component({
-    formGroup: {
+    form_group: {
       // prefix: 'form',
       cls: ['form-group-more'],
       size: 'lg',
@@ -78,7 +78,7 @@ it('Form group', async () => {
 
 it('Form group', async () => {
   assert.equal(component({
-    formGroup: {
+    form_group: {
       // prefix: 'form',
       cls: ['form-group-more'],
       size: 'sm',

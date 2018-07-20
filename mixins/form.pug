@@ -8,7 +8,7 @@ mixin form(params)
   - params.groups = params.groups || []
   - params.buttons = params.buttons || []
 
-  mixin renderFieldset()
+  mixin render_fieldset()
     if params.fieldset !== false && params.fieldset !== 0
       fieldset(disabled=params.disabled)&attributes(params.fieldset)
         block
@@ -22,7 +22,7 @@ mixin form(params)
     method=params.method
     enctype=params.file && 'multipart/form-data'
   )&attributes(params.attributes, attributes)
-    +renderFieldset
+    +render_fieldset
       if params.title
         legend= params.title
       if params.groups.length

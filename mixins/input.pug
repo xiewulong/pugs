@@ -7,7 +7,7 @@ mixin input(params)
   - params.prefix = params.prefix || (input && input.prefix) || 'input'
   - params.type = params.type || 'text'
 
-  mixin renderInput()
+  mixin render_input()
     input(
       type=params.type
       id=params.id
@@ -23,7 +23,7 @@ mixin input(params)
       autocomplete=params.autocomplete
     )&attributes(params.attributes, attributes)
 
-  mixin renderExtra(element)
+  mixin render_extra(element)
     - var isBtn = Object.prototype.toString.call(element) == '[object Array]'
     - var type = isBtn ? 'btn' : 'addon'
     div(class=[`${params.prefix}-group-${type}`])
@@ -42,9 +42,9 @@ mixin input(params)
   if params.left || params.right
     div(class=[`${params.prefix}-group`])
       if params.left
-        +renderExtra(params.left)
-      +renderInput()&attributes(attributes)
+        +render_extra(params.left)
+      +render_input()&attributes(attributes)
       if params.right
-        +renderExtra(params.right)
+        +render_extra(params.right)
   else
-    +renderInput()&attributes(attributes)
+    +render_input()&attributes(attributes)

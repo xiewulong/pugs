@@ -9,7 +9,7 @@ mixin tree(params)
       ul
         each item, i in items
           - var hasChildren = item.children && item.children.length
-          - var active = params.activeId && item.id == params.activeId
+          - var active = params.active_id && item.id == params.active_id
           li(
             class=[active && params.activeCls || null]
             data-id=item.id
