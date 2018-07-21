@@ -13,8 +13,8 @@ it('Tree', async () => {
   assert.equal(component({
     tree: {
       arrow: ['icon-arrow-down'],
-      activeCls: ['active'],
-      activeId: 1,
+      active_cls: ['active'],
+      active_id: 1,
       depth: true,
       // item: (item, active, depth, i) => {
       // 	console.dir(item);

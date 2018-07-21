@@ -2,16 +2,19 @@ include icon
 
 mixin tree(params)
   - params = params || {}
-  - params.activeCls = params.activeCls || 'active'
+  - params.active_cls = params.active_cls || 'active'
 
   mixin render_items(items, depth = 0)
     if items && items.length
-      ul
+      ul(class={
+        [`${params.cls}`]: !depth || !params.sub_cls,
+        [`${params.sub_cls}`]: depth && params.sub_cls,
+      })&attributes(params.attributes, attributes)
         each item, i in items
           - var hasChildren = item.children && item.children.length
           - var active = params.active_id && item.id == params.active_id
           li(
-            class=[active && params.activeCls || null]
+            class=[active && params.active_cls || null]
             data-id=item.id
             data-depth=params.depth && depth
           )

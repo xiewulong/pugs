@@ -147,7 +147,7 @@ include ~pugs/mixins/menu
   // locals.breadcrumb, 必须, 否则输出为空
   breadcrumb: {
     cls: ['breadcrumb', 'breadcrumb-more'],   // 最外层class类, 可选, 默认breadcrumb, 覆盖形式
-    activeCls: ['active', 'active-more'],     // 自动选中最后一个的类, 可选, 默认空
+    active_cls: ['active', 'active-more'],     // 自动选中最后一个的类, 可选, 默认空
 
     // 如果默认的item结构不满足需求, 可以通过item字符串模板或回调自定义结构, 可选
     // item: '<a href="${url}" class="${active}">${name}</a>',
@@ -892,7 +892,7 @@ include ~pugs/mixins/menu
   menu: {
     cls: ['menu', 'menu-more'],   // 最外层class类, 可选, 默认menu, 覆盖形式
     arrow: ['icon-arrow-down'],   // 如果有下级菜单, 不展开情况下i标签图标的class类, 可选, 无默认值
-    activeCls: ['active'],        // 当前菜单的class, 可选, 默认active
+    active_cls: ['active'],        // 当前菜单的class, 可选, 默认active
     activeId: 1,                  // 当前菜单的id标识, 可选, 无默认值
     depth: true,                  // 渲染从0开始的深度层级, 可选, 默认false
 
@@ -1277,7 +1277,7 @@ include ~pugs/mixins/menu
   // locals.tree, 必须, 否则输出为空
   tree: {
     arrow: ['icon-arrow-down'],   // 如果有下级菜单, 不展开情况下i标签图标的class类, 可选, 无默认值
-    activeCls: ['active'],        // 当前菜单的class, 可选, 默认active
+    active_cls: ['active'],        // 当前菜单的class, 可选, 默认active
     activeId: 1,                  // 当前菜单的id标识, 可选, 无默认值
     depth: true,                  // 渲染从0开始的深度层级, 可选, 默认false
 
