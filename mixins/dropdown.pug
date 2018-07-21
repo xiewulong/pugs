@@ -6,7 +6,7 @@ mixin dropdown(params)
   - var empty = !params.items || !params.items.length
 
   mixin render_wrapper()
-    if params.wrap !== false && params.wrap !== 0
+    if params.wrap
       div(class=[{dropup: params.up, [params.prefix]: params.static}, params.cls])&attributes(params.attributes, attributes)
         block
     else
