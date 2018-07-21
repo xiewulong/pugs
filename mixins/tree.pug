@@ -14,7 +14,7 @@ mixin tree(params)
           - var hasChildren = item.children && item.children.length
           - var active = params.active_id && item.id == params.active_id
           li(
-            class=[active && params.active_cls || null]
+            class=[item.cls, active && params.active_cls || null]
             data-id=item.id
             data-depth=params.depth && depth
           )
