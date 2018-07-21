@@ -36,4 +36,4 @@ mixin tree(params)
             if hasChildren
               +render_items(item.children, depth + 1)
 
-  +render_items(params.items)
+  +render_items(params.items)&attributes(params.attributes, attributes)
