@@ -7,14 +7,19 @@ mixin tree(params)
   mixin render_items(items, depth = 0)
     if items && items.length
       ul(class={
-        [`${params.cls}`]: !depth || !params.sub_cls,
-        [`${params.sub_cls}`]: depth && params.sub_cls,
+        [`${params.cls}`]: !depth || !params.children_cls,
+        [`${params.root_cls}`]: !depth,
+        [`${params.children_cls}`]: depth && params.children_cls,
       })&attributes(params.attributes, attributes)
         each item, i in items
           - var hasChildren = item.children && item.children.length
           - var active = params.active_id && item.id == params.active_id
           li(
-            class=[item.cls, active && params.active_cls || null]
+            class=[
+              item.cls,
+              params.parent_cls,
+              active && params.active_cls || null,
+            ]
             data-id=item.id
             data-depth=params.depth && depth
           )
