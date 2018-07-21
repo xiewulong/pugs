@@ -81,7 +81,7 @@ it('Tree', async () => {
     },
   }), `
 <ul>
-  <li data-id="1" data-depth="0">
+  <li class="active" data-id="1" data-depth="0">
     <div class="item">
       <i class="icon icon-home" aria-hidden="true">
       </i><a href="/menu1">menu1</a>
