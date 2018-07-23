@@ -2,10 +2,9 @@ include tree
 
 mixin menu(params)
   - params = params || {}
-  - params.menu_cls = params.cls || 'menu'
-  - params.cls = params.tree_cls || ''
+  - params.cls = params.cls || 'menu'
 
   if params.items && params.items.length
-    div(class=params.menu_cls)&attributes(params.attributes, attributes)
+    div(class=params.cls)&attributes(params.attributes, attributes)
       .menu-scroller
         +tree(params)

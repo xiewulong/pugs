@@ -7,7 +7,6 @@ mixin tree(params)
   mixin render_items(items, depth = 0)
     if items && items.length
       ul(class={
-        [`${params.cls}`]: params.cls && (!depth || !params.children_cls),
         [`${params.root_cls}`]: params.root_cls && !depth,
         [`${params.children_cls}`]: params.children_cls && depth,
       })&attributes(params.attributes, attributes)
